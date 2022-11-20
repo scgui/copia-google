@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* First Container (gmail/images) */
+
+.rectangle-dot {
+    width: 4px;
+    height: 4px;
+    margin: 1px;
+    border-radius: 50%;
+    background-color: #5F6368;
+}
+
+.first-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-container a {
+    color: #000;
+}
+
+.first-container img {
+    border-radius: 50%;
+    margin: 14px 8px;
+    width: 32px;
+    height: auto;
+}
+
+.rectangle {
+    margin-top: 21px;
+    margin-right: 10px;
+    margin-left: 13px;
+}
+
+.rectangle-line {
+    display: flex;
+}
+
+.first-container-text {
+    margin-top: 22px;
+    margin-right: 16px;
+    font-size: 13px;
+    color: black;
+}
+
+.first-container-text-mobile {
+    margin-top: 23px;
+    margin-right: 14px;
+    font-size: 11px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 12px;
+}
+
+.fa-bars {
+    margin-top: 19px;
+    margin-left: 8px;
+    font-size: 20px;
+    color: #9AA0A6;
+    margin-right: 13px;
+}
+
+.align-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear-div {
+    visibility: hidden;
+}
+
+/* Middle Container (Google logo and search) */
+
+.google-search-div {
+    margin-top: 194px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-engine {
+    border: 1px solid #DADCE0;
+    border-radius: 30px;
+    padding: 10px 18px;
+    width: 585px;
+    height: 46px;
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.engine-div {
+    display: flex;
+    align-items: center;
+}
+
+.fa-magnifying-glass,
+.fa-microphone {
+    font-size: 13px;
+    color: #9AA0A6;
+    margin-right: 13px;
+}
+
+
+.input-search {
+    border: none;
+    font-size: 16px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.lens {
+    width: 24px;
+    height: auto;
+}
+
+.fa-microphone {
+    font-size: 20px;
+    visibility: hidden;
+    width: 0px;
+}
+
+.grey-mic {
+    width: 0;
+}
+
+.microp {
+    width: 17px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.keyboard {
+    width: 23px;
+    margin-right: 16px;
+    margin-top: 2px;
+}
+
+.btns {
+    display: flex;
+    margin-top: 38px;
+}
+
+.pesquisa-google,
+.comsorte {
+    background-color: #F8F9FA;
+    padding: 10px 15px;
+    color: #3C4043;
+    font-size: 14px;
+}
+
+.pesquisa-google {
+    margin-right: 12px;
+}
+
+
+/*----- Footer -----*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.location,
+.options {
+    line-height: 26px;
+    padding: 10px;
+    background-color: #F2F2F2;
+    color: #70757A;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #DADCE0;
+}
+
+.options a {
+    color: #70757A;
+    margin: 0 13px;
+    font-size: 14px;
+}
+
+.brasil {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.div-left {
+    margin-left: 12px;
+}
+
+.div-right {
+    margin-right: 12px;
+}
+
+/* Responsive */
+    
+@media (max-width: 800px) {
+    .options {
+        flex-direction: column;
+    }
+
+    .div-left,
+    .div-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-engine {
+        width: 400px;
+    }
+    input.input-search {
+        width: 200px;
+    }
+
+    .como-funciona-pesquisa {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .como-funciona-pesquisa:after {
+        visibility: visible;
+        position:absolute;
+        top: 0;
+        left: 0;
+        content: "Tema escuro: desativado";
+    }
+}
+
+@media (max-width: 425px) {
+    .lens,
+    .keyboard,
+    .microp,
+    .comsorte,
+    .pesquisa-google {
+        visibility: hidden;
+    }
+
+    .fa-microphone {
+        visibility: visible;
+    }
+
+    .search-engine {
+        width: 370px;
+    }
+
+    .input-search {
+        width: 150px;
+    }
+
+    .grey-mic {
+        width: 20px;
+    }
+
+    .anchor-to-srink {
+        width: 0px;
+    }
+
+    .location {
+        font-size: 10px;
+    }
+
+    .div-left a,
+    .div-right a{
+        font-size: 11px;
+    }
+
+    .google-logo img{
+        width: 200px;
+    }
+
+    .disappear {
+        display: none;
+    }
+
+    .first-container a {
+        color: #5F6368;
+    }
+
+    .disappear-div {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 375px) {
+    .search-engine {
+        width: 330px;
+    }
+}
+
+@media (max-width: 320px) {
+    .search-engine {
+        width: 300px;
+    }
+}
